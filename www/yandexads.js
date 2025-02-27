@@ -1,3 +1,5 @@
+const exec = require('cordova/exec');
+
 let YandexAds = (function () {
     let initialized = false;
 
@@ -342,7 +344,7 @@ let YandexAds = (function () {
  */
 function callPlugin(name, params, onSuccess, onFailure)
 {
-    cordova.exec(function callPluginSuccess(result)
+    exec(function callPluginSuccess(result)
     {
 
         if (isFunction(onSuccess))
